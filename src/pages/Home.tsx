@@ -39,8 +39,7 @@ export function Home() {
         className="mx-auto max-w-6xl grow px-16 sm:px-24 pt-20 sm:pt-28 pb-12"
         style={{ fontSize: 20, fontWeight: 800 }}
       >
-        <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-gray-900 tracking-tight">Presentations</h1>
-        <p className="text-gray-700 mb-20">Choose a deck to open fullscreen. Use Left/Right arrows to flip pages, F to toggle fullscreen.</p>
+        <p className="text-gray-700 mb-20">Choose a deck to open fullscreen.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-6">
           {presentations.map((p) => (
             <Link
@@ -53,7 +52,6 @@ export function Home() {
               </div>
               <div className="p-5">
                 <div className="font-bold text-lg">{p.title}</div>
-                <div className="text-sm text-gray-600 truncate">{p.filename}</div>
               </div>
             </Link>
           ))}
