@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { findPresentationBySlug } from '../shared/presentations'
-import { FaHouse, FaArrowUpRightFromSquare } from 'react-icons/fa6'
 
 export function Viewer() {
   const { slug } = useParams<{ slug: string }>()
@@ -55,7 +54,6 @@ export function Viewer() {
             rel="noreferrer"
             aria-label="Open presentation in new tab"
           >
-            <FaArrowUpRightFromSquare />
             <span className="sm:hidden">Open tab</span>
             <span className="hidden sm:inline">Open In New Tab</span>
           </a>
@@ -75,7 +73,6 @@ export function Viewer() {
             className="inline-flex max-w-full items-center gap-1.5 sm:gap-2 align-middle whitespace-nowrap rounded-xl bg-brand-600 text-white px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base font-semibold hover:bg-brand-700 shadow align-middle"
             aria-label="Back to home"
           >
-            <FaHouse className="text-white" />
             <span className="sm:hidden">Home</span>
             <span className="hidden sm:inline">Back To Home</span>
           </button>
