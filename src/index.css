@@ -29,4 +29,11 @@ body {
   font-family: var(--font-sans);
   font-size: 18px; /* bigger text */
   font-weight: 700; /* bold text */
+  padding-top: 32px; /* ensure visible spacing globally */
+  padding-left: 32px;
+}
+
+#root {
+  padding-top: 32px;
+  padding-left: 32px;
 }

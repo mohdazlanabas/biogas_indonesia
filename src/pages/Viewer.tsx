@@ -52,7 +52,7 @@ export function Viewer() {
         <div className="bg-white/95 backdrop-blur rounded-2xl shadow-lg overflow-hidden border border-white/70">
           <iframe
             title={deck.title}
-            src={`/assets/${encodeURIComponent(deck.filename)}#toolbar=0&navpanes=0`}
+            src={`/assets/${encodeURIComponent(deck.filename)}#toolbar=1&navpanes=0`}
             className="w-full h-[80vh]"
           />
         </div>
