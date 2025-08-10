@@ -37,3 +37,11 @@ body {
   padding-top: 32px;
   padding-left: 32px;
 }
+
+/* Ensure pointer cursor for interactive elements across browsers */
+button,
+[role="button"],
+.btn,
+a.buttonlike {
+  cursor: pointer;
+}
