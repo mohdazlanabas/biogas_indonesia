@@ -1,8 +1,35 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaFilePdf } from 'react-icons/fa6'
 import { presentations } from '../shared/presentations'
 
 export function Home() {
+  const [now, setNow] = useState<Date>(new Date())
+  const [locationText, setLocationText] = useState<string>('')
+
+  useEffect(() => {
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
+    setLocationText(`Timezone: ${timeZone}`)
+
+    const intervalId = window.setInterval(() => setNow(new Date()), 60_000)
+
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const { latitude, longitude } = pos.coords
+          const lat = latitude.toFixed(4)
+          const lon = longitude.toFixed(4)
+          setLocationText(`Lat ${lat}, Lon ${lon} — ${timeZone}`)
+        },
+        () => {
+          // keep timezone-only text on error/denied
+        },
+      )
+    }
+
+    return () => window.clearInterval(intervalId)
+  }, [])
+
   return (
     <div
       className="min-h-screen flex flex-col"
@@ -19,9 +46,9 @@ export function Home() {
             <Link
               key={p.slug}
               to={`/view/${p.slug}`}
-              className="group rounded-2xl border-2 border-sky-300 bg-white/70 backdrop-blur-sm hover:border-sky-400 hover:shadow-xl hover:bg-white transition overflow-hidden"
+              className="group rounded-2xl border-4 border-gray-800 bg-white hover:shadow-2xl transition overflow-hidden"
             >
-              <div className="aspect-[4/3] bg-white/80 grid place-items-center">
+              <div className="aspect-[4/3] bg-white grid place-items-center">
                 <FaFilePdf className="text-brand-600 w-16 h-16 opacity-90 group-hover:opacity-100" />
               </div>
               <div className="p-5">
@@ -32,8 +59,12 @@ export function Home() {
           ))}
         </div>
       </main>
-      <footer className="border-t border-white/50 bg-white/60 backdrop-blur-sm py-8 text-center text-sm text-gray-600">
-        © {new Date().getFullYear()} AD Biogas Indonesia
+      <footer className="py-8 text-center text-sm text-gray-800">
+        <div className="max-w-6xl mx-auto px-16 sm:px-24">
+          <div className="h-1 bg-gray-800/80 rounded mb-4" />
+          <div>© {new Date().getFullYear()} AD Biogas Indonesia</div>
+          <div className="mt-2">{now.toLocaleString()} — {locationText}</div>
+        </div>
       </footer>
     </div>
   )
