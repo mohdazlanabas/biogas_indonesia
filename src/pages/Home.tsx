@@ -39,7 +39,7 @@ export function Home() {
         className="mx-auto max-w-6xl grow px-16 sm:px-24 pt-20 sm:pt-28 pb-12"
         style={{ fontSize: 20, fontWeight: 800 }}
       >
-        <p className="text-gray-700 mb-20">Choose a deck to open fullscreen.</p>
+        <p className="text-gray-700 mb-24">Choose A Deck To Open Fullscreen.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-6">
           {presentations.map((p) => (
             <Link
