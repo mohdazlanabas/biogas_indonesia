@@ -19,7 +19,7 @@ export function Home() {
             <Link
               key={p.slug}
               to={`/view/${p.slug}`}
-              className="group rounded-2xl border border-white/60 bg-white/70 backdrop-blur-sm hover:shadow-lg hover:bg-white transition overflow-hidden"
+              className="group rounded-2xl border-2 border-sky-300 bg-white/70 backdrop-blur-sm hover:border-sky-400 hover:shadow-xl hover:bg-white transition overflow-hidden"
             >
               <div className="aspect-[4/3] bg-white/80 grid place-items-center">
                 <FaFilePdf className="text-brand-600 w-16 h-16 opacity-90 group-hover:opacity-100" />
