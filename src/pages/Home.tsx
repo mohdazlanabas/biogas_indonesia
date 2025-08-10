@@ -40,7 +40,8 @@ export function Home() {
         style={{ fontSize: 20, fontWeight: 800 }}
       >
         <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-gray-900 tracking-tight">Presentations</h1>
-        <p className="text-gray-700 mb-10">Choose a deck to open fullscreen. Use Left/Right arrows to flip pages, F to toggle fullscreen.</p>
+        <p className="text-gray-700 mb-6">Choose a deck to open fullscreen. Use Left/Right arrows to flip pages, F to toggle fullscreen.</p>
+        <div className="h-4" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {presentations.map((p) => (
             <Link
