@@ -55,7 +55,9 @@ export function Viewer() {
             rel="noreferrer"
             aria-label="Open presentation in new tab"
           >
-            <FaArrowUpRightFromSquare /> Open In New Tab
+            <FaArrowUpRightFromSquare />
+            <span className="sm:hidden">Open tab</span>
+            <span className="hidden sm:inline">Open In New Tab</span>
           </a>
         </div>
         <div className="bg-white/95 backdrop-blur rounded-2xl shadow-lg overflow-hidden border border-white/70">
@@ -73,7 +75,9 @@ export function Viewer() {
             className="inline-flex max-w-full items-center gap-1.5 sm:gap-2 align-middle whitespace-nowrap rounded-xl bg-brand-600 text-white px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base font-semibold hover:bg-brand-700 shadow align-middle"
             aria-label="Back to home"
           >
-            <FaHouse className="text-white" /> Back To Home
+            <FaHouse className="text-white" />
+            <span className="sm:hidden">Home</span>
+            <span className="hidden sm:inline">Back To Home</span>
           </button>
         </div>
       </div>
