@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { findPresentationBySlug } from '../shared/presentations'
+import { FaHouse, FaArrowUpRightFromSquare } from 'react-icons/fa6'
 
 export function Viewer() {
   const { slug } = useParams<{ slug: string }>()
@@ -54,8 +55,24 @@ export function Viewer() {
             allow="fullscreen"
           />
         </div>
-        <div className="text-gray-700 mt-5 text-left text-base font-bold">
-          <a className="underline" href={`/assets/${encodeURIComponent(deck.filename)}`} target="_blank" rel="noreferrer">Open in new tab</a>
+        <div className="text-gray-700 mt-5 text-left text-base font-bold space-y-3">
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              className="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white text-gray-900 px-4 py-2 hover:bg-gray-50 shadow-sm"
+              href={`/assets/${encodeURIComponent(deck.filename)}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaArrowUpRightFromSquare /> Open in new tab
+            </a>
+            <button
+              type="button"
+              onClick={() => navigate('/')}
+              className="inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white px-5 py-2.5 hover:bg-brand-700 shadow"
+            >
+              <FaHouse className="text-white" /> Home
+            </button>
+          </div>
         </div>
       </div>
     </div>
