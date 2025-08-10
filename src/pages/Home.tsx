@@ -1,12 +1,10 @@
 import { Link } from 'react-router-dom'
 import { FaFilePdf } from 'react-icons/fa6'
-import { Header } from '../components/Header'
 import { presentations } from '../shared/presentations'
 
 export function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       <main className="mx-auto max-w-6xl grow px-4 py-8">
         <h1 className="text-2xl sm:text-3xl font-semibold mb-2">Presentations</h1>
         <p className="text-gray-600 mb-6">Choose a deck to open fullscreen. Use Left/Right arrows to flip pages, F to toggle fullscreen.</p>
