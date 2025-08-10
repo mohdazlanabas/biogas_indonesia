@@ -46,9 +46,9 @@ export function Home() {
             <Link
               key={p.slug}
               to={`/view/${p.slug}`}
-              className="group rounded-2xl border-4 border-gray-800 bg-white hover:shadow-2xl transition overflow-hidden"
+              className="group block rounded-2xl border-4 border-gray-800 bg-white shadow-sm hover:shadow-2xl transition overflow-hidden"
             >
-              <div className="aspect-[4/3] bg-white grid place-items-center">
+              <div className="aspect-[4/3] bg-white grid place-items-center border-b border-gray-200">
                 <FaFilePdf className="text-brand-600 w-16 h-16 opacity-90 group-hover:opacity-100" />
               </div>
               <div className="p-5">
@@ -62,6 +62,7 @@ export function Home() {
       <footer className="py-8 text-center text-sm text-gray-800">
         <div className="max-w-6xl mx-auto px-16 sm:px-24">
           <div className="h-1 bg-gray-800/80 rounded mb-4" />
+          <div className="mb-2">&nbsp;</div>
           <div>© {new Date().getFullYear()} AD Biogas Indonesia</div>
           <div className="mt-2">{now.toLocaleString()} — {locationText}</div>
         </div>
