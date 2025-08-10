@@ -49,7 +49,7 @@ export function Viewer() {
       <div className="pt-20 sm:pt-28 pb-10 px-16 sm:px-24" style={{ fontSize: 20, fontWeight: 800 }}>
         <div className="text-gray-700 mb-6 text-center">
           <a
-            className="inline-flex items-center gap-2 align-middle whitespace-nowrap rounded-xl border border-gray-300 bg-white text-gray-900 px-4 py-2 text-base font-semibold hover:bg-gray-50 shadow-sm align-middle"
+            className="inline-flex max-w-full items-center gap-1.5 sm:gap-2 align-middle whitespace-nowrap rounded-xl border border-gray-300 bg-white text-gray-900 px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base font-semibold hover:bg-gray-50 shadow-sm align-middle"
             href={`/assets/${encodeURIComponent(deck.filename)}`}
             target="_blank"
             rel="noreferrer"
@@ -70,7 +70,7 @@ export function Viewer() {
           <button
             type="button"
             onClick={() => navigate('/')}
-            className="inline-flex items-center gap-2 align-middle whitespace-nowrap rounded-xl bg-brand-600 text-white px-5 py-2.5 text-base font-semibold hover:bg-brand-700 shadow align-middle"
+            className="inline-flex max-w-full items-center gap-1.5 sm:gap-2 align-middle whitespace-nowrap rounded-xl bg-brand-600 text-white px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base font-semibold hover:bg-brand-700 shadow align-middle"
             aria-label="Back to home"
           >
             <FaHouse className="text-white" /> Back To Home
