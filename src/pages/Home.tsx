@@ -4,11 +4,11 @@ import { presentations } from '../shared/presentations'
 
 export function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <main className="mx-auto max-w-6xl grow px-6 sm:px-10 py-10 sm:py-14">
-        <h1 className="text-3xl sm:text-4xl font-extrabold mb-3 text-gray-900 tracking-tight">Presentations</h1>
-        <p className="text-gray-700 mb-8">Choose a deck to open fullscreen. Use Left/Right arrows to flip pages, F to toggle fullscreen.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-sky-100 to-sky-200 text-lg font-bold">
+      <main className="mx-auto max-w-6xl grow px-8 sm:px-14 py-12 sm:py-16">
+        <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-gray-900 tracking-tight">Presentations</h1>
+        <p className="text-gray-700 mb-10">Choose a deck to open fullscreen. Use Left/Right arrows to flip pages, F to toggle fullscreen.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {presentations.map((p) => (
             <Link
               key={p.slug}
