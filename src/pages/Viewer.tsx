@@ -47,9 +47,9 @@ export function Viewer() {
       style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)', paddingTop: 32, paddingLeft: 32 }}
     >
       <div className="pt-20 sm:pt-28 pb-10 px-16 sm:px-24" style={{ fontSize: 20, fontWeight: 800 }}>
-        <div className="text-gray-700 mb-4 text-center">
+        <div className="text-gray-700 mb-6 text-center">
           <a
-            className="inline-flex items-center gap-2 align-middle whitespace-nowrap rounded-xl border border-gray-300 bg-white text-gray-900 px-4 py-2 text-base font-semibold hover:bg-gray-50 shadow-sm"
+            className="inline-flex items-center gap-2 align-middle whitespace-nowrap rounded-xl border border-gray-300 bg-white text-gray-900 px-4 py-2 text-base font-semibold hover:bg-gray-50 shadow-sm align-middle"
             href={`/assets/${encodeURIComponent(deck.filename)}`}
             target="_blank"
             rel="noreferrer"
@@ -66,11 +66,11 @@ export function Viewer() {
             allow="fullscreen"
           />
         </div>
-        <div className="text-center mt-4">
+        <div className="text-center mt-6">
           <button
             type="button"
             onClick={() => navigate('/')}
-            className="inline-flex items-center gap-2 align-middle whitespace-nowrap rounded-xl bg-brand-600 text-white px-5 py-2.5 text-base font-semibold hover:bg-brand-700 shadow"
+            className="inline-flex items-center gap-2 align-middle whitespace-nowrap rounded-xl bg-brand-600 text-white px-5 py-2.5 text-base font-semibold hover:bg-brand-700 shadow align-middle"
             aria-label="Back to home"
           >
             <FaHouse className="text-white" /> Back To Home
