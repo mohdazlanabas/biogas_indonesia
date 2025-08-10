@@ -43,7 +43,7 @@ export function Viewer() {
     <div
       ref={containerRef}
       className="min-h-screen"
-      style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)', paddingTop: 32, paddingLeft: 32 }}
+      style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)', paddingTop: 32, paddingLeft: 32, paddingRight: 32 }}
     >
       <div className="pt-20 sm:pt-28 pb-10 px-16 sm:px-24" style={{ fontSize: 20, fontWeight: 800 }}>
         <div className="text-gray-700 mb-14 mx-auto max-w-5xl flex justify-center">
