@@ -36,7 +36,7 @@ export function Home() {
       style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)', paddingTop: 32, paddingLeft: 32 }}
     >
       <main
-        className="mx-auto max-w-6xl grow px-16 sm:px-24 pt-20 sm:pt-28 pb-28 sm:pb-12"
+        className="mx-auto max-w-6xl grow px-16 sm:px-24 pt-20 sm:pt-28 pb-12"
         style={{ fontSize: 20, fontWeight: 800 }}
       >
         <p className="text-gray-700 mb-24">Choose A Deck To Open Fullscreen.</p>
