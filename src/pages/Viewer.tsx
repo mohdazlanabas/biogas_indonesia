@@ -43,8 +43,12 @@ export function Viewer() {
   }
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-sky-100 to-sky-200 text-lg font-bold">
-      <div className="px-8 sm:px-14 pt-12 sm:pt-16 pb-8">
+    <div
+      ref={containerRef}
+      className="min-h-screen"
+      style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)' }}
+    >
+      <div className="pt-16 sm:pt-24 pb-10 px-12 sm:px-20" style={{ fontSize: 20, fontWeight: 800 }}>
         <div className="bg-white/95 backdrop-blur rounded-2xl shadow-lg overflow-hidden border border-white/70">
           <iframe
             title={deck.title}
@@ -52,7 +56,7 @@ export function Viewer() {
             className="w-full h-[80vh]"
           />
         </div>
-        <div className="text-gray-700 mt-5 text-left text-base">
+        <div className="text-gray-700 mt-5 text-left text-base font-bold">
           Tip: press F for fullscreen, Esc to exit. Open in new tab for page thumbnails.
         </div>
       </div>

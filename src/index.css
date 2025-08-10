@@ -21,4 +21,12 @@
 }
 
 html, body, #root { height: 100%; }
-body { @apply bg-gradient-to-br from-sky-50 to-sky-100 text-gray-900 antialiased font-sans text-lg font-semibold; }
+body {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans);
+  font-size: 18px; /* bigger text */
+  font-weight: 700; /* bold text */
+}

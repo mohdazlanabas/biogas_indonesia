@@ -4,8 +4,8 @@ import { presentations } from '../shared/presentations'
 
 export function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-sky-100 to-sky-200 text-lg font-bold">
-      <main className="mx-auto max-w-6xl grow px-8 sm:px-14 py-12 sm:py-16">
+    <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)' }}>
+      <main className="mx-auto max-w-6xl grow px-12 sm:px-20 pt-16 sm:pt-24 pb-12" style={{ fontSize: 20, fontWeight: 800 }}>
         <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-gray-900 tracking-tight">Presentations</h1>
         <p className="text-gray-700 mb-10">Choose a deck to open fullscreen. Use Left/Right arrows to flip pages, F to toggle fullscreen.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
