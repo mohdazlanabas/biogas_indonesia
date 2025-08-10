@@ -21,4 +21,4 @@
 }
 
 html, body, #root { height: 100%; }
-body { @apply bg-white text-gray-900 antialiased font-sans; }
+body { @apply bg-gradient-to-br from-sky-50 to-sky-100 text-gray-900 antialiased font-sans text-lg font-semibold; }

@@ -45,17 +45,17 @@ export function Viewer() {
   }
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-black">
-      <div className="py-4 sm:py-6 container mx-auto px-2 sm:px-6">
-        <div className="bg-white rounded-lg shadow overflow-hidden aspect-[16/10]">
+    <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-sky-100 to-sky-200">
+      <div className="py-8 sm:py-10 container mx-auto px-4 sm:px-10">
+        <div className="bg-white/90 backdrop-blur rounded-2xl shadow-lg overflow-hidden aspect-[16/10] border border-white/70">
           <iframe
             title={deck.title}
             src={`/assets/${encodeURIComponent(deck.filename)}#toolbar=0&navpanes=0`}
             className="w-full h-full"
           />
         </div>
-        <div className="text-white/80 mt-3 text-center text-sm">
-          Tip: press F for fullscreen, Esc to exit, open in new tab for page thumbnails.
+        <div className="text-gray-700 mt-4 text-center text-base font-bold">
+          Tip: press F for fullscreen, Esc to exit. Open in new tab for page thumbnails.
         </div>
       </div>
     </div>

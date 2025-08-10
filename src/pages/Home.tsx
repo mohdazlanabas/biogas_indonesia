@@ -5,28 +5,28 @@ import { presentations } from '../shared/presentations'
 export function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="mx-auto max-w-6xl grow px-4 py-8">
-        <h1 className="text-2xl sm:text-3xl font-semibold mb-2">Presentations</h1>
-        <p className="text-gray-600 mb-6">Choose a deck to open fullscreen. Use Left/Right arrows to flip pages, F to toggle fullscreen.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <main className="mx-auto max-w-6xl grow px-6 sm:px-10 py-10 sm:py-14">
+        <h1 className="text-3xl sm:text-4xl font-extrabold mb-3 text-gray-900 tracking-tight">Presentations</h1>
+        <p className="text-gray-700 mb-8">Choose a deck to open fullscreen. Use Left/Right arrows to flip pages, F to toggle fullscreen.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {presentations.map((p) => (
             <Link
               key={p.slug}
               to={`/view/${p.slug}`}
-              className="group rounded-xl border hover:shadow-lg transition overflow-hidden"
+              className="group rounded-2xl border border-white/60 bg-white/70 backdrop-blur-sm hover:shadow-lg hover:bg-white transition overflow-hidden"
             >
-              <div className="aspect-[4/3] bg-gray-50 grid place-items-center">
-                <FaFilePdf className="text-brand-600 w-14 h-14 opacity-80 group-hover:opacity-100" />
+              <div className="aspect-[4/3] bg-white/80 grid place-items-center">
+                <FaFilePdf className="text-brand-600 w-16 h-16 opacity-90 group-hover:opacity-100" />
               </div>
-              <div className="p-4">
-                <div className="font-medium">{p.title}</div>
-                <div className="text-sm text-gray-500 truncate">{p.filename}</div>
+              <div className="p-5">
+                <div className="font-bold text-lg">{p.title}</div>
+                <div className="text-sm text-gray-600 truncate">{p.filename}</div>
               </div>
             </Link>
           ))}
         </div>
       </main>
-      <footer className="border-t py-6 text-center text-sm text-gray-500">
+      <footer className="border-t border-white/50 bg-white/60 backdrop-blur-sm py-8 text-center text-sm text-gray-600">
         © {new Date().getFullYear()} AD Biogas Indonesia
       </footer>
     </div>
