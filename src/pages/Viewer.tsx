@@ -12,14 +12,11 @@ export function Viewer() {
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') navigate('/')
       if (e.key.toLowerCase() === 'f') toggleFullscreen()
-      if (e.key === 'ArrowLeft') window.history.back()
-      if (e.key === 'ArrowRight') window.history.forward()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [navigate])
+  }, [])
 
   function toggleFullscreen() {
     const el = containerRef.current
@@ -52,12 +49,13 @@ export function Viewer() {
         <div className="bg-white/95 backdrop-blur rounded-2xl shadow-lg overflow-hidden border border-white/70">
           <iframe
             title={deck.title}
-            src={`/assets/${encodeURIComponent(deck.filename)}#toolbar=1&navpanes=0`}
-            className="w-full h-[80vh]"
+            src={`/assets/${encodeURIComponent(deck.filename)}#zoom=page-width`}
+            className="w-full h-[82vh]"
+            allow="fullscreen"
           />
         </div>
         <div className="text-gray-700 mt-5 text-left text-base font-bold">
-          Tip: If the PDF viewer controls are hidden, use your browser toolbar to zoom or open the file directly.
+          If controls are limited, use the link to open directly:
           {' '}<a className="underline" href={`/assets/${encodeURIComponent(deck.filename)}`} target="_blank" rel="noreferrer">Open in new tab</a>.
         </div>
       </div>
