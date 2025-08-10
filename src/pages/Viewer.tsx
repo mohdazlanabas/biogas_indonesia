@@ -55,6 +55,7 @@ export function Viewer() {
             aria-label="Open presentation in new tab"
           >
             Open In New Tab
+            ----------------
           </a>
         </div>
         <div className="bg-white/95 backdrop-blur rounded-2xl shadow-lg overflow-hidden border border-white/70 mx-auto max-w-5xl">
@@ -72,6 +73,7 @@ export function Viewer() {
             className="inline-flex max-w-full items-center gap-2 align-middle whitespace-nowrap rounded-xl bg-brand-600 text-white px-5 py-2.5 text-base font-semibold hover:bg-brand-700 shadow align-middle cursor-pointer"
             aria-label="Back to home"
           >
+            ----------------
             Back To Home
           </button>
         </div>
