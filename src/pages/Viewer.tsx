@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { findPresentationBySlug } from '../shared/presentations'
 
@@ -6,7 +6,7 @@ export function Viewer() {
   const { slug } = useParams<{ slug: string }>()
   const navigate = useNavigate()
   const containerRef = useRef<HTMLDivElement | null>(null)
-  const [isFullscreen, setIsFullscreen] = useState(false)
+  
 
   const deck = findPresentationBySlug(slug || '')
 
@@ -26,10 +26,8 @@ export function Viewer() {
     if (!el) return
     if (!document.fullscreenElement) {
       el.requestFullscreen?.()
-      setIsFullscreen(true)
     } else {
       document.exitFullscreen?.()
-      setIsFullscreen(false)
     }
   }
 
