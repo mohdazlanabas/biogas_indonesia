@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { findPresentationBySlug } from '../shared/presentations'
-import { FaArrowRight, FaExpand } from 'react-icons/fa6'
 
 export function Viewer() {
   const { slug } = useParams<{ slug: string }>()
@@ -47,28 +46,7 @@ export function Viewer() {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-black">
-      <div className="fixed top-0 left-0 right-0 z-20 p-3 sm:p-4 flex items-center gap-2 sm:gap-3">
-        <Link to="/" className="inline-flex items-center gap-2 rounded bg-white/90 hover:bg-white px-3 py-2 text-sm">
-          <img src="/logo.svg" alt="logo" className="h-5 w-5" />
-          <span className="hidden sm:inline">Home</span>
-        </Link>
-        <a
-          href={`/assets/${encodeURIComponent(deck.filename)}`}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 rounded bg-white/90 hover:bg-white px-3 py-2 text-sm"
-        >
-          <FaArrowRight /> <span className="hidden sm:inline">Open in new tab</span>
-        </a>
-        <button
-          onClick={toggleFullscreen}
-          className="ml-auto inline-flex items-center gap-2 rounded bg-white/90 hover:bg-white px-3 py-2 text-sm"
-        >
-          <FaExpand /> <span className="hidden sm:inline">{isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}</span>
-        </button>
-      </div>
-
-      <div className="pt-16 pb-4 sm:pt-20 sm:pb-6 container mx-auto px-2 sm:px-6">
+      <div className="py-4 sm:py-6 container mx-auto px-2 sm:px-6">
         <div className="bg-white rounded-lg shadow overflow-hidden aspect-[16/10]">
           <iframe
             title={deck.title}
