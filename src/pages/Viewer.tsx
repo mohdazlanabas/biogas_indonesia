@@ -55,8 +55,7 @@ export function Viewer() {
           />
         </div>
         <div className="text-gray-700 mt-5 text-left text-base font-bold">
-          If controls are limited, use the link to open directly:
-          {' '}<a className="underline" href={`/assets/${encodeURIComponent(deck.filename)}`} target="_blank" rel="noreferrer">Open in new tab</a>.
+          <a className="underline" href={`/assets/${encodeURIComponent(deck.filename)}`} target="_blank" rel="noreferrer">Open in new tab</a>
         </div>
       </div>
     </div>
