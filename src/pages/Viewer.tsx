@@ -46,9 +46,9 @@ export function Viewer() {
     <div
       ref={containerRef}
       className="min-h-screen"
-      style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)' }}
+      style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)', paddingTop: 32, paddingLeft: 32 }}
     >
-      <div className="pt-16 sm:pt-24 pb-10 px-12 sm:px-20" style={{ fontSize: 20, fontWeight: 800 }}>
+      <div className="pt-20 sm:pt-28 pb-10 px-16 sm:px-24" style={{ fontSize: 20, fontWeight: 800 }}>
         <div className="bg-white/95 backdrop-blur rounded-2xl shadow-lg overflow-hidden border border-white/70">
           <iframe
             title={deck.title}
@@ -57,7 +57,8 @@ export function Viewer() {
           />
         </div>
         <div className="text-gray-700 mt-5 text-left text-base font-bold">
-          Tip: press F for fullscreen, Esc to exit. Open in new tab for page thumbnails.
+          Tip: If the PDF viewer controls are hidden, use your browser toolbar to zoom or open the file directly.
+          {' '}<a className="underline" href={`/assets/${encodeURIComponent(deck.filename)}`} target="_blank" rel="noreferrer">Open in new tab</a>.
         </div>
       </div>
     </div>
